@@ -11,6 +11,7 @@ header {
   margin: 0 0 71px 0;
   padding: 55px 0 55px 97px;
   border-bottom: 1px solid #e5e5e5;
+  user-select: none;
 }
 header .top-left-icon {
   color: #5c48d3;
@@ -49,6 +50,7 @@ main button {
   box-shadow: 3px 3px 3px rgb(52, 51, 51);
   text-shadow: -2px -2px 0 black;
   cursor: pointer;
+  user-select: none;
 }
 main button:active {
   transform: translateY(3px);
@@ -80,10 +82,20 @@ main button:active {
 .minus-btn {
   font-size: 55px;
   cursor: pointer;
+  filter: drop-shadow(3px 3px 3px black);
+}
+.minus-btn:active {
+  transform: translateY(3px);
+  filter: drop-shadow(0 0 0);
+}
+.plus-btn:active {
+  transform: translateY(3px);
+  filter: drop-shadow(0 0 0);
 }
 .plus-btn {
   font-size: 55px;
   cursor: pointer;
+  filter: drop-shadow(3px 3px 3px black);
 }
 .hidden {
   visibility: hidden;
@@ -101,6 +113,7 @@ main button:active {
   color: white;
   text-shadow: 0 0 5px white;
   box-shadow: inset 2px 2px 5px #c4bdec, inset -2px -2px 5px #201753;
+  user-select: none;
 }
 .counter button {
   height: 60px;
@@ -115,6 +128,7 @@ main button:active {
   box-shadow: 3px 3px 3px rgb(52, 51, 51);
   text-shadow: -2px -2px 0 black;
   cursor: pointer;
+  user-select: none;
 }
 footer {
   display: flex;
@@ -123,6 +137,7 @@ footer {
   margin: 100px 0 25px;
   gap: 5px;
   font-size: 14px;
+  user-select: none;
 }
 footer a {
   color: black;
