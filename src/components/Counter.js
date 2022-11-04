@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Counter = ({ counter, setCounter, name }) => {
+const Counter = ({ counter, setCounter, index, elem }) => {
   return (
     <div className={"counter"}>
       <div className="counter-main">
@@ -8,40 +8,49 @@ const Counter = ({ counter, setCounter, name }) => {
           className="minus-btn"
           icon="minus"
           onClick={() => {
-            if (name === "counter2") {
-              const newCounter = [...counter];
-              console.log(newCounter);
-              newCounter.splice(1, 1, newCounter[1] - 1);
-              setCounter(newCounter);
-              console.log(newCounter);
-            } else {
-              const newCounter = [...counter];
-              newCounter.splice(0, 1, counter[0] - 1);
-              setCounter(newCounter);
-              console.log(newCounter);
-            }
+            // if (name === "counter2") {
+            //   const newCounter = [...counter];
+            //   console.log(newCounter);
+            //   newCounter.splice(1, 1, newCounter[1] - 1);
+            //   setCounter(newCounter);
+            //   console.log(newCounter);
+            // } else {
+            //   const newCounter = [...counter];
+            //   newCounter.splice(0, 1, counter[0] - 1);
+            //   setCounter(newCounter);
+            //   console.log(newCounter);
+            // }
+            const newCounter = [...counter];
+            newCounter[index] = counter[index] - 1;
+            setCounter(newCounter);
+            console.log(counter);
           }}
         />
 
         <div className="counter-display">
-          {name === "counter2" ? counter[1] : counter[0]}
+          {/* {name === "counter2" ? counter[1] : counter[0]} */}
+          {counter[index]}
         </div>
         <FontAwesomeIcon
           className="plus-btn"
           icon="plus"
           onClick={() => {
-            if (name === "counter2") {
-              const newCounter = [...counter];
-              console.log(newCounter);
-              newCounter.splice(1, 1, newCounter[1] + 1);
-              setCounter(newCounter);
-              console.log(newCounter);
-            } else {
-              const newCounter = [...counter];
-              newCounter.splice(0, 1, counter[0] + 1);
-              setCounter(newCounter);
-              console.log(newCounter);
-            }
+            // if (name === "counter2") {
+            //   const newCounter = [...counter];
+            //   console.log(newCounter);
+            //   newCounter.splice(1, 1, newCounter[1] + 1);
+            //   setCounter(newCounter);
+            //   console.log(newCounter);
+            // } else {
+            //   const newCounter = [...counter];
+            //   newCounter.splice(0, 1, counter[0] + 1);
+            //   setCounter(newCounter);
+            //   console.log(newCounter);
+            // }
+            const newCounter = [...counter];
+            newCounter[index] = counter[index] + 1;
+            setCounter(newCounter);
+            console.log(counter);
           }}
         />
       </div>
@@ -49,18 +58,21 @@ const Counter = ({ counter, setCounter, name }) => {
       <button
         className="reset-btn"
         onClick={() => {
-          if (name === "counter2") {
-            const newCounter = [...counter];
-            console.log(newCounter);
-            newCounter.splice(1, 1, 0);
-            setCounter(newCounter);
-            console.log(newCounter);
-          } else {
-            const newCounter = [...counter];
-            newCounter.splice(0, 1, 0);
-            setCounter(newCounter);
-            console.log(newCounter);
-          }
+          //   if (name === "counter2") {
+          //     const newCounter = [...counter];
+          //     console.log(newCounter);
+          //     newCounter.splice(1, 1, 0);
+          //     setCounter(newCounter);
+          //     console.log(newCounter);
+          //   } else {
+          //     const newCounter = [...counter];
+          //     newCounter.splice(0, 1, 0);
+          //     setCounter(newCounter);
+          //     console.log(newCounter);
+          //   }
+          const newCounter = [...counter];
+          newCounter[index] = 0;
+          setCounter(newCounter);
         }}
       >
         Reset

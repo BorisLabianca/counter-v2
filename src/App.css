@@ -41,6 +41,15 @@ main button:active {
   box-shadow: none;
   box-shadow: inset 3px 3px 3px black, 0.5px 0.5px 0.5px rgb(50, 50, 50);
 }
+.add-counter-hdn {
+  visibility: hidden;
+}
+.counter-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 155px;
+}
 .counter {
   display: flex;
   flex-direction: column;
