@@ -34,6 +34,17 @@ function App() {
         >
           Add counter
         </button>
+        <button
+          className={counterNumber === 3 ? "show destroy-btn" : "destroy-btn"}
+          onClick={() => {
+            setCounterNumber(1);
+            const newCounter = [0];
+            setCounter(newCounter);
+          }}
+        >
+          Back to square one
+        </button>
+
         <div className="counter-section">
           {" "}
           {counter.map((elem, index) => {

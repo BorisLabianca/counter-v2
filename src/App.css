@@ -22,6 +22,20 @@ main {
   justify-content: center;
   gap: 166px;
 }
+.destroy-btn {
+  position: absolute;
+  top: 230px;
+  line-height: 30px;
+  z-index: 0;
+  visibility: hidden;
+}
+.show {
+  position: absolute;
+  top: 230px;
+  line-height: 30px;
+  z-index: 0;
+  visibility: visible;
+}
 main button {
   height: 70px;
   width: 250px;
@@ -70,6 +84,9 @@ main button:active {
 .plus-btn {
   font-size: 55px;
   cursor: pointer;
+}
+.hidden {
+  visibility: hidden;
 }
 .counter-display {
   height: 150px;
